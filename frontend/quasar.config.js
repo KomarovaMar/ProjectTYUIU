@@ -20,10 +20,7 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://legacy-app.quasar.dev/quasar-cli-vite-v1/boot-files
-    boot: [
-      
-      
-    ],
+    boot: ['axios'],
 
     // https://legacy-app.quasar.dev/quasar-cli-vite-v1/quasar-config-file#css
     css: [
@@ -51,7 +48,7 @@ module.exports = configure(function (/* ctx */) {
         node: 'node20'
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -69,6 +66,15 @@ module.exports = configure(function (/* ctx */) {
 
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
+      env: {
+
+        API_ENDPOINT: ctx.dev
+
+          ? 'http://0.0.0.0:3000'
+
+          : 'https://your-domain.ru',
+
+      },
 
       vitePlugins: [
         ['vite-plugin-checker', {
@@ -103,7 +109,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Notify']
     },
 
     // animations: 'all', // --- includes all animations
