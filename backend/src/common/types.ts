@@ -29,8 +29,6 @@ export enum Role {
     lastname: string;
   
     roles: Role[];
-
-    userId: number;
   
   }
   
