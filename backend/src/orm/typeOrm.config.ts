@@ -6,6 +6,8 @@ import { config } from 'dotenv';
 
 import { User } from './user.entity';
 
+import { Task } from './task.entity';
+
  
 
 config();
@@ -30,7 +32,7 @@ export default new DataSource({
 
   database: configService.get('DB_DATABASE'),
 
-  entities: [User],
+  entities: [User, Task],
 
   migrations: ['dist/src/orm/migrations/*.js'],
 
