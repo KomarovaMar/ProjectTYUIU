@@ -39,8 +39,6 @@ export class TasksService {
 
     const authorUser = await this.usersService.findOneById(user.userId);
 
- 
-
     const newTask = new Task();
 
     newTask.title = createTaskDto.title;
