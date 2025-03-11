@@ -74,6 +74,42 @@
 
         </template>
 
+
+
+        <template v-if="isCustomer()">
+
+                    
+
+                    <q-item-label header>
+
+                        Основной раздел
+
+                    </q-item-label>
+
+
+
+                    <q-item clickable to="/tasks">
+
+                        <q-item-section avatar>
+
+                            <q-icon name="fact_check" />
+
+                        </q-item-section>
+
+
+
+                        <q-item-section>
+
+                            <q-item-label>Проекты</q-item-label>
+
+                        </q-item-section>
+
+                    </q-item>
+
+
+
+                    </template>
+
  
 
     </q-list>
@@ -86,7 +122,7 @@ import { useMainStore } from 'src/stores/main-store';
 
  
 
-const { isUser, isAdmin } = useMainStore();
+const { isUser, isAdmin, isCustomer } = useMainStore();
 
  
 

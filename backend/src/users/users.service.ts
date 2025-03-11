@@ -34,7 +34,7 @@ export class UsersService {
 
  
 
-  async findOneById(id: number): Promise<User | null> {
+  async findOneById(id: number): Promise<User | any> {
 
     return this.userRepository.findOneBy({ id });
 
@@ -52,7 +52,7 @@ export class UsersService {
 
     lastname: string,
 
-    roles: Role[] = [Role.user],
+    roles: Role[] = [Role.user, Role.customer],
 
     status = UserAccountStatus.pending,
 

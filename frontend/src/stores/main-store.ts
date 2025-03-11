@@ -42,6 +42,8 @@ export const useMainStore = defineStore('main', () => {
 
   const isUser = () => state.roles.some((r) => r == Role.user);
 
+  const isCustomer = () => state.roles.some((r) => r == Role.customer);
+
  
 
   return {
@@ -53,6 +55,8 @@ export const useMainStore = defineStore('main', () => {
     isAdmin,
 
     isUser,
+
+    isCustomer,
 
   };
 

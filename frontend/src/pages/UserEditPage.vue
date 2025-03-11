@@ -78,9 +78,9 @@ const lastname = ref('');
 
 const password = ref('');
 
-const roles: Ref<Role[]> = ref([Role.user]);
+const roles: Ref<Role[]> = ref([Role.user, Role.customer]);
 
-const rolesDict = [Role.admin, Role.user]
+const rolesDict = [Role.admin, Role.user, Role.customer]
 
 const status: Ref<UserAccountStatus> = ref(UserAccountStatus.active);
 
