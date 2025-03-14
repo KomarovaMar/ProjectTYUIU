@@ -126,3 +126,25 @@ export type TaskDto = {
  
 
 export type CreateUpdateTaskDto = Omit<TaskDto, 'id' | 'createdAt' | 'author'>;
+
+
+export enum ProjectStatus {
+
+  new = 'new',
+
+  inProgress = 'inProgress',
+
+  done = 'done',
+
+}
+
+export type ProjectDto = {
+  id: number;
+  name: string;
+  description: string;
+  status: ProjectStatus;
+  createdAt: Date;
+  author: SecuredUser;
+};
+
+export type CreateUpdateProjectDto = Omit<ProjectDto, 'id' | 'createdAt' | 'author'>;

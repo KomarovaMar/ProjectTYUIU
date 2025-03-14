@@ -8,6 +8,8 @@ import { User } from './user.entity';
 
 import { Task } from './task.entity';
 
+import { Project } from './project.entity'; 
+
  
 
 config();
@@ -32,7 +34,7 @@ export default new DataSource({
 
   database: configService.get('DB_DATABASE'),
 
-  entities: [User, Task],
+  entities: [User, Task, Project],
 
   migrations: ['dist/src/orm/migrations/*.js'],
 

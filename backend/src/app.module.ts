@@ -18,6 +18,10 @@ import { TasksModule } from './tasks/tasks.module';
 
 import { Task } from './orm/task.entity';
 
+import { ProjectsModule } from './projects/project.module';
+
+import { Project } from './orm/project.entity';
+
  
 
 @Module({
@@ -54,7 +58,7 @@ import { Task } from './orm/task.entity';
 
         cache: true,
 
-        entities: [User, Task],
+        entities: [User, Task, Project],
 
         maxQueryExecutionTime: 5000,
 
@@ -74,8 +78,9 @@ import { Task } from './orm/task.entity';
 
     }),
 
-    TypeOrmModule.forFeature([User, Task]),
+    TypeOrmModule.forFeature([User, Task, Project]),
     TasksModule,
+    ProjectsModule,
 
   ],
 

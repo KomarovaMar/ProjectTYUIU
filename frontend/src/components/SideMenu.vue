@@ -88,7 +88,7 @@
 
 
 
-                    <q-item clickable to="/tasks">
+                    <q-item clickable to="/projects">
 
                         <q-item-section avatar>
 
